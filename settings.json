@@ -1,0 +1,231 @@
+{
+    "webDriver": {
+        "executablePath": "./chromedriver",
+        "browser": "chrome"
+    },
+    "player": {
+        "server": "https://es.grepolis.com/",
+        "username": "joaquin 123456",
+        "password": "",
+        "world_number": 0,
+        "manageSenate": true,
+        "reapVillages": true,
+        "upgrade_villages": true,
+        "trade": false,
+        "academy": true,
+        "commander": true,
+        "admin": true,
+        "captain": true,
+        "premium": true,
+        "culture": true,
+        "village_battle_points": 60,
+        "max_hours_to_run": 0.0,
+        "max_sessions": 0,
+        "frequency": "5 minutes"
+    },
+    "times": {
+        "recruitment2": 30,
+        "recruitment": 30,
+        "culture": 11,
+        "academy": 5,
+        "upgrade_buildings": 15,
+        "village_loot": 11,
+        "village_loot_captain": 11,
+        "end": 0
+    },
+    "reverse_map": {},
+    "cities": {},
+    "market_cities": [
+        "AAA",
+        "8- Palmeras",
+        "NadaSuedeMalirPal"
+    ],
+    "academy": {
+        "slinger": true,
+        "archer": true,
+        "town_guard": true,
+        "hoplite": true,
+        "meteorology": false,
+        "espionage": false,
+        "booty": true,
+        "pottery": true,
+        "rider": false,
+        "architecture": true,
+        "instructor": false,
+        "bireme": true,
+        "building_crane": true,
+        "shipwright": false,
+        "colonize_ship": false,
+        "chariot": false,
+        "attack_ship": true,
+        "conscription": false,
+        "demolition_ship": false,
+        "catapult": false,
+        "cryptography": false,
+        "democracy": false,
+        "small_transporter": true,
+        "plow": true,
+        "berth": true,
+        "trireme": false,
+        "phalanx": false,
+        "breach": false,
+        "mathematics": false,
+        "ram": false,
+        "cartography": false,
+        "take_over": false,
+        "stone_storm": false,
+        "temple_looting": false,
+        "divine_selection": false,
+        "combat_experience": false,
+        "strong_wine": false,
+        "set_sail": false
+    },
+    "buildings": [
+        {
+            "name": "senate",
+            "maxLevel": 25,
+            "priority": 10,
+            "levelIndex": 0
+        },
+        {
+            "name": "cave",
+            "maxLevel": 10,
+            "priority": 2,
+            "levelIndex": 1
+        },
+        {
+            "name": "timberCamp",
+            "maxLevel": 40,
+            "priority": 1,
+            "levelIndex": 2
+        },
+        {
+            "name": "quarry",
+            "maxLevel": 40,
+            "priority": 1,
+            "levelIndex": 3
+        },
+        {
+            "name": "silverMine",
+            "maxLevel": 40,
+            "priority": 1,
+            "levelIndex": 4
+        },
+        {
+            "name": "marketplace",
+            "maxLevel": 30,
+            "priority": 2,
+            "levelIndex": 10
+        },
+        {
+            "name": "harbor",
+            "maxLevel": 30,
+            "priority": 8,
+            "levelIndex": 6
+        },
+        {
+            "name": "barracks",
+            "maxLevel": 30,
+            "priority": 0,
+            "levelIndex": 7
+        },
+        {
+            "name": "cityWall",
+            "maxLevel": 25,
+            "priority": 0,
+            "levelIndex": 8
+        },
+        {
+            "name": "warehouse",
+            "maxLevel": 35,
+            "priority": 10,
+            "levelIndex": 9
+        },
+        {
+            "name": "farm",
+            "maxLevel": 45,
+            "priority": 10,
+            "levelIndex": 10
+        },
+        {
+            "name": "academy",
+            "maxLevel": 36,
+            "priority": 10,
+            "levelIndex": 11
+        },
+        {
+            "name": "temple",
+            "maxLevel": 30,
+            "priority": 0,
+            "levelIndex": 12
+        }
+    ],
+    "groups": {
+        "Tropas": {
+            "academy": {
+                "archer": true,
+                "hoplite": true,
+                "booty": true,
+                "pottery": true,
+                "architecture": true,
+                "instructor": true,
+                "building_crane": true,
+                "attack_ship": true,
+                "conscription": true,
+                "catapult": true,
+                "small_transporter": true,
+                "plow": true,
+                "berth": true,
+                "phalanx": true,
+                "combat_experience": true,
+                "strong_wine": true,
+                "mathematics": true,
+                "ram": true,
+                "trireme": true
+            },
+            "units": {
+                "attack_ship": 75,
+                "soldiers": 19,
+                "small_transporter": 6
+            }
+        },
+        "Birremes": {
+            "academy": {
+                "booty": true,
+                "pottery": true,
+                "architecture": true,
+                "bireme": true,
+                "building_crane": true,
+                "shipwright": true,
+                "attack_ship": true,
+                "plow": true,
+                "mathematics": true,
+                "ram": true,
+                "combat_experience": true,
+                "strong_wine": true
+            },
+            "units": {
+                "bireme": 250,
+                "attack_ship": 75
+            }
+        },
+        "Voladoras": {
+            "academy": {
+                "meteorology": true,
+                "booty": true,
+                "pottery": true,
+                "architecture": true,
+                "instructor": true,
+                "building_crane": true,
+                "plow": true,
+                "temple_looting": true,
+                "divine_selection": true,
+                "combat_experience": true,
+                "strong_wine": true
+            },
+            "units": {
+                "griffin": 100
+            }
+        }
+    }
+}

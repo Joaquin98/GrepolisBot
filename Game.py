@@ -273,7 +273,7 @@ class Game:
 	    self.open_academy()
 	    investigateButtons = self.browser.find_elements_by_class_name('btn_upgrade')
 	    for item in investigateButtons:
-	        if(item.get_attribute('data-research_id') in academySettings and [item.get_attribute('data-research_id')]):
+	        if(item.get_attribute('data-research_id') in academySettings and academySettings[item.get_attribute('data-research_id')]):
 	            click(item)
 	            investigateButtons = self.browser.find_elements_by_class_name('btn_upgrade')
 
@@ -285,7 +285,7 @@ class Game:
 	    self.open_academy()
 	    investigateButtons = self.browser.find_elements_by_class_name('btn_upgrade')
 	    for item in investigateButtons:
-	        if(item.get_attribute('data-research_id') in academySettings and [item.get_attribute('data-research_id')]):
+	        if(item.get_attribute('data-research_id') in academySettings and academySettings[item.get_attribute('data-research_id')]):
 	            click(item)
 	            investigateButtons = self.browser.find_elements_by_class_name('btn_upgrade')
 

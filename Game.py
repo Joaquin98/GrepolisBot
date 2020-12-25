@@ -32,6 +32,10 @@ class Game:
 	# Files
 	def load_settings(self):
 		self.settings = self.files.get_settings()
+		server = self.settings['player']['server']
+		server = server.replace("https://","").replace(".grepolis.com/","")
+		#print(server)
+		self.translation = self.settings['Translation'][server.upper()]
 
 	# Cities
 	def open_cities_list(self):

@@ -227,5 +227,9 @@
                 "griffin": 100
             }
         }
+    },
+    "Translation": {
+        "ES": {},
+        "EN": {}
     }
 }

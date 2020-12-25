@@ -19,7 +19,7 @@ python3 main.py
 It only works with Admin. 
 ### Buldings
 In the file settings.json there is a list where we can specify the priority of every building.
-The bot select which building upgrade based in that list.
+The bot select which building upgrade based on that list.
 ### Farm
 - Captain Activated: The bot use the captain village view.
 - No Admin: The bot goes through every city and loot the villages one by one.

@@ -127,6 +127,27 @@ class Grepolis_gui:
         manager.insert(self.farm_interval)
         manager.new_row(1)
 
+
+        self.upgrade_villages = tk.BooleanVar()
+        upgrade_villages_button = tk.Checkbutton(frame, variable=self.upgrade_villages, name='upgrade_villages', text="Upgrade villages?")
+        manager.insert(upgrade_villages_button)
+        if self.settings['player']['upgrade_villages']:
+            upgrade_villages_button.select()
+        manager.new_row(1)
+
+        manager.insert(tk.Label(frame, text="While less than _ points are needed"))
+        self.village_battle_points = tk.Entry(frame, width=5, name='battle_points')
+        self.village_battle_points.insert(0, self.settings['player']['village_battle_points'])
+        manager.insert(self.village_battle_points)
+        manager.new_row(1)
+
+
+        manager.insert(tk.Label(frame, text="Every _ minutes"))
+        self.village_upgrade_interval = tk.Entry(frame, width=5, name='upgrade_villages_interval')
+        self.village_upgrade_interval.insert(0, self.settings['times']['upgrade_villages'])
+        manager.insert(self.village_upgrade_interval)
+        manager.new_row(1)
+
         self.trade = tk.BooleanVar()
         trade_button = tk.Checkbutton(frame, variable=self.trade, name='trade', text="Gold Trade?")
         #manager.insert(trade_button)
@@ -166,6 +187,8 @@ class Grepolis_gui:
         self.culture_interval.insert(0, self.settings['times']['culture'])
         manager.insert(self.culture_interval)
         manager.new_row(1)
+
+
 
 
         run_button = tk.Button(frame, text="    run    ")
@@ -230,11 +253,14 @@ class Grepolis_gui:
         self.settings['player']['captain'] = self.captain.get()
         self.settings['player']['admin'] = self.admin.get()
         self.settings['player']['culture'] = self.culture.get()
+        self.settings['player']['upgrade_villages'] = self.upgrade_villages.get()
+        self.settings['player']['village_battle_points'] = int(self.village_battle_points.get())
         self.settings['times']['upgrade_buildings'] = int(self.upgrade_interval.get())
         self.settings['times']['village_loot'] = int(self.farm_interval.get())
         self.settings['times']['village_loot_captain'] = int(self.farm_interval.get())
         self.settings['times']['academy'] = int(self.academy_interval.get())
         self.settings['times']['culture'] = int(self.culture_interval.get())
+        self.settings['times']['upgrade_villages'] = int(self.village_upgrade_interval.get())
 
         if self.rem_pass:
             self.settings['player']['password'] = self.password_input.get()

@@ -29,6 +29,7 @@
         "culture": 11,
         "academy": 5,
         "upgrade_buildings": 15,
+        "upgrade_villages": 20,
         "village_loot": 11,
         "village_loot_captain": 11,
         "end": 0

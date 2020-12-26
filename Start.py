@@ -19,8 +19,12 @@ def load_init_actions(game):
     if(game.settings['player']['reapVillages']):
         if(game.settings['player']['captain']):
             game.add_action(datetime.now(),game.village_loot_captain,None)
+            if(game.settings['player']['upgrade_villages']):
+                for currentCity in game.cities:
+                    game.add_action(datetime.now(), game.upgrade_villages, currentCity)
         else:
-            game.add_action(datetime.now(),game.village_loot,None)
+            for currentCity in game.cities:
+                game.add_action(datetime.now(),game.village_loot,currentCity)
 
     if(game.settings['player']['culture']):
         if(game.settings['player']['admin']):

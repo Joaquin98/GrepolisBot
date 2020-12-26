@@ -1,0 +1,2 @@
+- Upgrade_villages only works if the villages are ready to be looted.
+- 

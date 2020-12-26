@@ -152,7 +152,7 @@ class Game:
 	            try:
 	                upgradeVillageButton = self.browser.find_element_by_class_name('btn_upgrade')
 	                cost = int(upgradeVillageButton.text.split(" ")[1])
-	                if(cost < 30):
+	                if(self.settings['player']['upgrade_villages'] and cost <= self.settings['player']['village_battle_points']):
 	                    click(upgradeVillageButton)
 	            except Exception:
 	                pass
@@ -163,7 +163,39 @@ class Game:
 	        # close village window
 	        pressEscape(self.browser)
 
-	
+	def upgrade_villages(self,city):
+   		#go to island view
+	    goToIslandViewButton = self.browser.find_element_by_class_name('island_view')
+	    click(goToIslandViewButton)
+	    showCurrentIslandButton = self.browser.find_element_by_class_name('btn_jump_to_town')
+	    ac = ActionChains(self.browser)
+	    ac.move_to_element(showCurrentIslandButton).move_by_offset(0, 0).click().perform()
+	    sleep(2)
+	    pressEscape(self.browser)
+
+	    # reap all villages that are available
+	    for village in self.browser.find_elements_by_class_name('claim'):
+	        pressEscape(self.browser)
+	        # open village window
+	        villageLink = village
+	        actions = ActionChains(self.browser)
+	        actions.move_to_element(villageLink).click().perform()
+	        sleep(1)
+
+	        # make sure we're allowed to collect resources
+	        if len(self.browser.find_element_by_class_name('pb_bpv_unlock_time').text) == 0:
+	            # click on button to collect resources
+	            try:
+	                upgradeVillageButton = self.browser.find_element_by_class_name('btn_upgrade')
+	                cost = int(upgradeVillageButton.text.split(" ")[1])
+	                if(self.settings['player']['upgrade_villages'] and cost <= self.settings['player']['village_battle_points']):
+	                    click(upgradeVillageButton)
+	            except Exception:
+	                pass
+	            pressEscape(self.browser)
+
+	        # close village window
+	        pressEscape(self.browser)
 
 	def village_loot_captain(self,city):
 		self.go_to_premium_villages()

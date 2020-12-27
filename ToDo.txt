@@ -1,2 +1,5 @@
 - Upgrade_villages only works if the villages are ready to be looted.
-- 
+- Do a list for every city for the buildings that we want to upgrade, not only by priority.
+What happens when we lose a city? Or when we change the name of the city.
+- Have a different academy configuration for every city.
+- Recruitment.

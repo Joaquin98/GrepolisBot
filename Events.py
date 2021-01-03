@@ -11,8 +11,9 @@ class ActionsQueue:
     def __init__(self):
         self.aQueue = PriorityQueue()
     def add_action(self,date,action,city):
-        self.aQueue.put((date,action,city))
+        self.aQueue.put((date,id(action),action,city))
     def get_action(self):
-        return self.aQueue.get()
+    	date,id,action,city = self.aQueue.get()
+        return (date,action,city)
     def empty(self):
         return self.aQueue.empty()

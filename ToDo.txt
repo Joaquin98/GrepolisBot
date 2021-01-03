@@ -3,3 +3,4 @@
 What happens when we lose a city? Or when we change the name of the city.
 - Have a different academy configuration for every city.
 - Recruitment.
+- Save coins in the cave.

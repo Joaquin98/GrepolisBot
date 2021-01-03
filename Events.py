@@ -8,12 +8,12 @@ import time
 # .empty() Es vacia?
 
 class ActionsQueue:
-    def __init__(self):
-        self.aQueue = PriorityQueue()
-    def add_action(self,date,action,city):
-        self.aQueue.put((date,id(action),action,city))
-    def get_action(self):
-    	date,id,action,city = self.aQueue.get()
-        return (date,action,city)
-    def empty(self):
-        return self.aQueue.empty()
+	def __init__(self):
+		self.aQueue = PriorityQueue()
+	def add_action(self,date,action,city):
+		self.aQueue.put((date,id(action),action,city))
+	def get_action(self):
+		date,id,action,city = self.aQueue.get()
+		return (date,action,city)
+	def empty(self):
+		return self.aQueue.empty()
